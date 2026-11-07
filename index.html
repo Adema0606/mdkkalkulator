@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="query.js" defer></script>
+    <script src="index.js" defer></script>
     <style>
         .inputs {
             display: flex;
@@ -16,10 +16,17 @@
         .resultcont {
             display: flex;
             gap: 10px;
+            margin-top: 20px;
+            font-size: 20px;
         }
 
         #firstInput {
             
+        }
+        
+        p[style*="red"] {
+            font-size: 12px;
+            margin-top: 5px;
         }
     </style>
 </head>
@@ -28,15 +35,15 @@
     <div class="inputs">
         <div>
             <input id="firstInput" type="text">
-            <p id="firstInputError"></p>
+            <p id="firstInputError" style="color: red;"></p>
         </div>
         <div>
             <input id="secondInput" type="text">
-            <p id="secondInputError"></p>
+            <p id="secondInputError" style="color: red;"></p>
         </div>
         <div>
             <input id="thirdInput" type="text">
-            <p id="thirdInputError"></p>
+            <p id="thirdInputError" style="color: red;"></p>
         </div>
     </div>
 
@@ -44,7 +51,7 @@
 
     <div class="resultcont">
         <p>Результат: </p>
-        <p class="result"></p>
+        <p class="result" style="font-weight: bold; color: blue;"></p>
     </div>
 </body>
 
