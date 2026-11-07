@@ -24,7 +24,7 @@ button.addEventListener('click', () => {
         firstError.textContent = "Введите число";
         hasError = true;
     }
-    
+
     if (third === "" || isNaN(third)) {
         thirdError.textContent = "Введите число";
         hasError = true;
@@ -35,7 +35,7 @@ button.addEventListener('click', () => {
         hasError = true;
     }
 
-    if (hasError) return; 
+    if (hasError) return;
 
     const num1 = Number(first);
     const num2 = Number(third);
