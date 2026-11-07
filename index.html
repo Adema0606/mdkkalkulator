@@ -1,11 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="query.js" defer></script>
+    <style>
+        .inputs {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .resultcont {
+            display: flex;
+            gap: 10px;
+        }
+
+        #firstInput {
+            
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="inputs">
+        <div>
+            <input id="firstInput" type="text">
+            <p id="firstInputError"></p>
+        </div>
+        <div>
+            <input id="secondInput" type="text">
+            <p id="secondInputError"></p>
+        </div>
+        <div>
+            <input id="thirdInput" type="text">
+            <p id="thirdInputError"></p>
+        </div>
+    </div>
+
+    <button id="button">Расчитать</button>
+
+    <div class="resultcont">
+        <p>Результат: </p>
+        <p class="result"></p>
+    </div>
 </body>
+
 </html>
