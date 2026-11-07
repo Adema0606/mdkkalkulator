@@ -3,7 +3,6 @@ const heightInput = document.getElementById("heightInput");
 const button = document.getElementById("button");
 const resultValue = document.querySelector(".result");
 const resultStatus = document.querySelector(".status");
-
 const weightError = document.getElementById("weightInputError");
 const heightError = document.getElementById("heightInputError");
 
@@ -17,27 +16,24 @@ button.addEventListener('click', () => {
     const height = heightInput.value.trim().replace(',', '.');
 
     let hasError = false;
-
     if (weight === "" || isNaN(weight) || Number(weight) <= 0) {
         weightError.textContent = "Введите корректный вес";
         hasError = true;
     }
-    
+
     if (height === "" || isNaN(height) || Number(height) <= 0) {
         heightError.textContent = "Введите корректный рост";
         hasError = true;
     }
 
-    if (hasError) return; 
+    if (hasError) return;
 
     const weightNum = Number(weight);
     const heightNum = Number(height) / 100;
-
     const imt = weightNum / (heightNum * heightNum);
     const roundedImt = imt.toFixed(1);
 
     resultValue.innerHTML = roundedImt;
-
     let statusText = "";
     let statusColor = "";
 
